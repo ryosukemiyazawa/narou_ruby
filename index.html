@@ -67,7 +67,7 @@ var convert_ruby = function(type){
 	var converted = conver_ruby_html(content);
 
 	if(type == "narou"){
-		converted = converted.replace(/<ruby>(.*?)<rt>(.*?)<\/rt><\/ruby>/g, '｜$1《$2》');
+		converted = converted.replace(/<ruby>(.{1,10})(.*?)<rt>(.*?)<\/rt><\/ruby>/g, '｜$1《$3》$2');
 	}
 
 	if(type == "kakuyomu"){
